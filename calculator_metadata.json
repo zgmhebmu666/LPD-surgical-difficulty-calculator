@@ -1,0 +1,114 @@
+{
+  "project_title": "LPD Surgical Difficulty Prediction Model",
+  "outcome": "手术难度",
+  "positive_label": "困难组",
+  "negative_label": "非困难组",
+  "best_model": "GBM",
+  "best_model_display": "GBM",
+  "selected_variables": [
+    "CA125",
+    "ALT",
+    "肿瘤大小",
+    "性别",
+    "慢性胰腺炎",
+    "术前胆道引流",
+    "肿瘤位置"
+  ],
+  "threshold_train_youden": 0.3739003679627807,
+  "validation_auc": 0.7462573591253154,
+  "validation_auc_ci_low": 0.6807589485883556,
+  "validation_auc_ci_high": 0.8117557696622753,
+  "train_n": 527,
+  "validation_n": 227,
+  "train_event_rate": 0.36432637571157495,
+  "validation_event_rate": 0.36123348017621143,
+  "variables": [
+    {
+      "name": "CA125",
+      "display_name": "CA125",
+      "type": "numeric",
+      "min": 2.02,
+      "max": 611.0,
+      "q01": 4.2948,
+      "q99": 132.82000000000016,
+      "default": 14.135000000000002
+    },
+    {
+      "name": "ALT",
+      "display_name": "ALT",
+      "type": "numeric",
+      "min": 4.9,
+      "max": 651.3,
+      "q01": 7.606,
+      "q99": 475.4350000000003,
+      "default": 59.65
+    },
+    {
+      "name": "肿瘤大小",
+      "display_name": "Tumor size",
+      "type": "numeric",
+      "min": 0.19999999999999996,
+      "max": 12.5,
+      "q01": 0.7,
+      "q99": 8.5,
+      "default": 3.0
+    },
+    {
+      "name": "性别",
+      "display_name": "Sex (1=Male)",
+      "type": "categorical",
+      "categories": [
+        0,
+        1
+      ],
+      "default": 1,
+      "option_labels": {
+        "0": "0 = Female / 女",
+        "1": "1 = Male / 男"
+      }
+    },
+    {
+      "name": "慢性胰腺炎",
+      "display_name": "Chronic pancreatitis (1=Yes)",
+      "type": "categorical",
+      "categories": [
+        0,
+        1
+      ],
+      "default": 0,
+      "option_labels": {
+        "0": "0 = No / 否",
+        "1": "1 = Yes / 是"
+      }
+    },
+    {
+      "name": "术前胆道引流",
+      "display_name": "Preoperative biliary drainage (1=Yes)",
+      "type": "categorical",
+      "categories": [
+        0,
+        1
+      ],
+      "default": 0,
+      "option_labels": {
+        "0": "0 = No / 否",
+        "1": "1 = Yes / 是"
+      }
+    },
+    {
+      "name": "肿瘤位置",
+      "display_name": "Tumor location (1=Pancreas)",
+      "type": "categorical",
+      "categories": [
+        0,
+        1
+      ],
+      "default": 0,
+      "option_labels": {
+        "0": "0 = Other / 非胰腺部位",
+        "1": "1 = Pancreas / 胰腺"
+      }
+    }
+  ],
+  "note": "This calculator is intended for research use only and does not replace clinical judgement."
+}
